@@ -1,0 +1,10 @@
+lego-builder-web/
+├── README.md
+├── index.html
+├── src/
+│   ├── script.js
+│   └── style.css  (future, for polish)
+├── assets/
+│   └── (future brick icons, if needed)
+└── docs/
+    └── (future PDFs and related tools)
