@@ -1,8 +1,9 @@
 # The Lego Lab
 
 <p align="center">
- ![The Lego Lab Logo](Assets/images/logo.png)
+  <img src="Assets/images/logo.png" alt="The Lego Lab Logo" width="200">
 </p>
+
 
 ## Overview
 A simple, innovative web tool that generates a Lego brick list and build guide based on user input, either by uploading a picture or typing a text description.
