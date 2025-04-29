@@ -1,7 +1,7 @@
 # The Lego Lab
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Drabzit/TheLegoLab/main/Assets/images/logo.png" alt="The Lego Lab Logo" width="200">
+ ![The Lego Lab Logo](Assets/images/logo.png)
 </p>
 
 ## Overview
