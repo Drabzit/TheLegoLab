@@ -2,7 +2,22 @@
 
 ![The Lego Lab Logo](assets/images/logo.png)
 
-A fun and creative web app for kids aged 4–12 to turn ideas into LEGO creations.
+## Overview
+A simple, innovative web tool that generates a Lego brick list and build guide based on user input, either by uploading a picture or typing a text description.
+
+Currently supports:
+- Text Input (e.g., "Desk Name Plaque - CHRIS")
+- Visual Mockup (simple grid + stud representation)
+- Lego part images and metadata
+- Dynamic output generation
+
+Future enhancements planned:
+- Full picture-to-brick AI translation
+- PDF download of build instructions
+- Brick marketplace integration (phase 2)
+
+## Getting Started
+1. Clone the repository:A fun and creative web app for kids aged 4–12 to turn ideas into LEGO creations.
 
 This is a simple web app that lets users input an idea or text (like "Desk Name Plaque CHRIS") and outputs:
 - A list of LEGO parts needed
