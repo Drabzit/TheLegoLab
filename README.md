@@ -1,4 +1,4 @@
-# Lego Builder Web
+# The Lego Lab
 
 This is a simple web app that lets users input an idea or text (like "Desk Name Plaque CHRIS") and outputs:
 - A list of LEGO parts needed
