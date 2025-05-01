@@ -34,7 +34,19 @@ processButton.addEventListener('click', () => {
         outputSection.style.display = 'block';
     }
 });
+// Add this inside the 'processButton' click event after outputSection.style.display = 'block';
+const previewContainer = document.getElementById('previewContainer');
+previewContainer.innerHTML = ''; // Clear any existing previews
 
+const previewImage = document.createElement('img');
+previewImage.src = 'Assets/images/sample_chris_preview.png'; // Add a sample image to this path
+previewImage.alt = 'Preview of Chris LEGO Plaque';
+previewImage.style.cursor = 'pointer';
+previewImage.style.width = '300px';
+previewImage.addEventListener('click', () => {
+    window.location.href = 'build.html?design=chris';
+});
+previewContainer.appendChild(previewImage);
 });
 
 function generateBrickList(bricks) { let html = <h3>Lego Brick List</h3><table><tr><th>Image</th><th>Part</th><th>Color</th><th>Quantity</th><th>Purpose</th></tr>; bricks.forEach(brick => { const data = legoPartsDatabase[brick.part]; html +=  <tr> <td><img src="${data.image}" alt="${data.name}" width="50"></td> <td>${data.name}</td> <td>${data.color}</td> <td>${brick.quantity}</td> <td>${brick.purpose}</td> </tr>; }); html += </table>; return html; }
