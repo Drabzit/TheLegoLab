@@ -1,90 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>The Lego Lab</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Lego Lab</title>
+  <link rel="stylesheet" href="Styles/style.css" />
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
-        h1 {
-            font-size: 3rem;
-            color: #333;
-            margin-bottom: 30px;
-        }
+    header {
+      padding: 20px;
+    }
 
-        #textInput {
-            width: 60%;
-            max-width: 600px;
-            padding: 15px 20px;
-            font-size: 1.2rem;
-            border-radius: 25px;
-            border: none;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
-            outline: none;
-        }
+    h1 {
+      color: #333;
+    }
 
-        #processButton {
-            padding: 12px 24px;
-            border-radius: 20px;
-            background-color: #FFCC00;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            margin-bottom: 40px;
-        }
+    #textInput {
+      width: 80%;
+      max-width: 400px;
+      padding: 12px 20px;
+      margin: 20px auto;
+      border: none;
+      border-radius: 25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-size: 1rem;
+    }
 
-        #processButton:hover {
-            background-color: #e6b800;
-        }
+    #generateButton {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #ffcc00;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-        .nav-buttons {
-            position: absolute;
-            bottom: 40px;
-            display: flex;
-            gap: 20px;
-        }
+    #generateButton:hover {
+      background-color: #e6b800;
+    }
 
-        .nav-buttons a {
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 20px;
-            background-color: #fff;
-            color: #333;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-            font-weight: 500;
-        }
+    #output-section {
+      margin-top: 30px;
+      padding: 20px;
+    }
 
-        .nav-buttons a:hover {
-            background-color: #ddd;
-        }
-    </style>
+    .nav-buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .nav-buttons a {
+      text-decoration: none;
+    }
+
+    .nav-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #00aaff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-button:hover {
+      background-color: #007acc;
+    }
+
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 90%;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-
+  <header>
+    <img src="Assets/images/logo.png" alt="The Lego Lab Logo" width="120">
     <h1>The Lego Lab</h1>
+  </header>
 
-    <input type="text" id="textInput" placeholder="Enter your build idea, e.g. 'Chris desk name plaque'" />
+  <main>
+    <input type="text" id="textInput" placeholder="Type a name e.g. Chris" />
+    <br/>
+    <button id="generateButton">Generate Build</button>
 
-    <button id="processButton">Generate Build</button>
-
-    <img id="previewImage" style="display:none; cursor:pointer;" src="Assets/images/mockup_chris.png" />
+    <div id="output-section"></div>
 
     <div class="nav-buttons">
-        <a href="explore.html">Explore</a>
-        <a href="instructions.html">Instructions</a>
-        <a href="about.html">About</a>
+      <a href="explore.html"><button class="nav-button">Explore Builds</button></a>
+      <a href="builder.html"><button class="nav-button">Start Building</button></a>
+      <a href="about.html"><button class="nav-button">About</button></a>
     </div>
+  </main>
 
-    <script src="script.js"></script>
+  <script src="Scripts/script.js"></script>
 </body>
 </html>
