@@ -1,90 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>The Lego Lab</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        h1 {
-            font-size: 3rem;
-            color: #333;
-            margin-bottom: 30px;
-        }
-
-        #textInput {
-            width: 60%;
-            max-width: 600px;
-            padding: 15px 20px;
-            font-size: 1.2rem;
-            border-radius: 25px;
-            border: none;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
-            outline: none;
-        }
-
-        #processButton {
-            padding: 12px 24px;
-            border-radius: 20px;
-            background-color: #FFCC00;
-            border: none;
-            font-weight: bold;
-            cursor: pointer;
-            margin-bottom: 40px;
-        }
-
-        #processButton:hover {
-            background-color: #e6b800;
-        }
-
-        .nav-buttons {
-            position: absolute;
-            bottom: 40px;
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-buttons a {
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 20px;
-            background-color: #fff;
-            color: #333;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-            font-weight: 500;
-        }
-
-        .nav-buttons a:hover {
-            background-color: #ddd;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>The Lego Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts/generate.js" defer></script>
 </head>
 <body>
-
+  <header>
+    <img src="="Assets/images/logo.png" alt="The Lego Lab Logo" width="150">
     <h1>The Lego Lab</h1>
-
-    <input type="text" id="textInput" placeholder="Enter your build idea, e.g. 'Chris desk name plaque'" />
-
+    <nav>
+      <a href="explore.html"><img src="Assets/icons/explore_icon.png" alt="Explore" width="32"></a>
+    </nav>
+  </header>
+  <main>
+    <input id="textInput" placeholder="Enter a name or idea..." />
     <button id="processButton">Generate Build</button>
-
-    <img id="previewImage" style="display:none; cursor:pointer;" src="Assets/images/mockup_chris.png" />
-
-    <div class="nav-buttons">
-        <a href="explore.html">Explore</a>
-        <a href="instructions.html">Instructions</a>
-        <a href="about.html">About</a>
-    </div>
-
-    <script src="script.js"></script>
+    <img id="previewImage" style="display:none; cursor:pointer;" src="Assets/images/mockup_chris.png" alt="Preview Image"/>
+  </main>
 </body>
 </html>
