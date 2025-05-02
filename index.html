@@ -112,12 +112,15 @@
 
     <!-- Preview Section -->
     <section id="preview" style="margin-top: 2rem; display: none;">
-      <h2>🔍 Preview</h2>
-      <img id="previewImage" src="" alt="Design Preview" width="400" style="border: 2px solid #ccc; border-radius: 8px;" />
-      <div style="margin-top: 1rem;">
-        <a id="builderLink" class="btn" href="#" target="_blank">🧱 Open in Builder</a>
-      </div>
-    </section>
+  <h2>🔍 Preview</h2>
+  <a id="builderLink" href="#" target="_blank" title="Click to open in Builder">
+    <img id="previewImage" src="" alt="Design Preview" width="400"
+         style="border: 2px solid #ccc; border-radius: 8px; cursor: pointer; transition: transform 0.2s ease;" />
+  </a>
+</section>
+
+
+
   </main>
 
   <div id="output-section"></div>
