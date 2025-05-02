@@ -4,96 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Explore Builds - The LEGO Lab</title>
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="Styles/style.css" />
   <style>
-    .gallery-container {
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      text-align: center;
+    }
+    header, footer {
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    p.description {
+      margin: 10px 0 30px;
+      font-size: 1rem;
+    }
+    .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      padding: 20px;
+      padding: 0 20px;
     }
-
-    .gallery-item {
-      width: 200px;
-      text-align: center;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      border: 2px solid #ccc;
+    .build-tile {
+      width: 120px;
+      height: 120px;
+      background-color: #ddd;
       border-radius: 8px;
-      transition: transform 0.2s ease;
-      cursor: pointer;
-    }
-
-    .gallery-item img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .gallery-item p {
-      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
       font-weight: bold;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .build-tile:hover {
+      background-color: #ccc;
+    }
+    .nav-home {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #00aaff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .nav-home:hover {
+      background-color: #007acc;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>🧪 Explore LEGO Name Plaques</h1>
-    <p>Click on a name to view its build details</p>
+    <h1>🧱 Explore Builds</h1>
+    <p class="description">Click on a name to view its custom LEGO plaque and building instructions.</p>
   </header>
 
   <main>
-    <div class="gallery-container">
-      <div class="gallery-item">
-        <a href="builder.html?design=kirby">
-          <img src="assets/images/sample_kirby_preview.png" alt="Kirby Name Plaque" />
-          <p>Kirby</p>
-        </a>
-      </div>
-      <div class="gallery-item">
-        <a href="builder.html?design=krystal">
-          <img src="assets/images/sample_krystal_preview.png" alt="Krystal Name Plaque" />
-          <p>Krystal</p>
-        </a>
-      </div>
-      <div class="gallery-item">
-        <a href="builder.html?design=jackson">
-          <img src="assets/images/sample_jackson_preview.png" alt="Jackson Name Plaque" />
-          <p>Jackson</p>
-        </a>
-      </div>
-      <div class="gallery-item">
-        <a href="builder.html?design=andy">
-          <img src="assets/images/sample_andy_preview.png" alt="Andy Name Plaque" />
-          <p>Andy</p>
-        </a>
-      </div>
-      <div class="gallery-item">
-        <a href="builder.html?design=riley">
-          <img src="assets/images/sample_riley_preview.png" alt="Riley Name Plaque" />
-          <p>Riley</p>
-        </a>
-      </div>
-      <div class="gallery-item">
-        <a href="builder.html?design=grayson">
-          <img src="assets/images/sample_grayson_preview.png" alt="Grayson Name Plaque" />
-          <p>Grayson</p>
-        </a>
-      </div>
-      <div class="gallery-item">
-        <a href="builder.html?design=easton">
-          <img src="assets/images/sample_easton_preview.png" alt="Easton Name Plaque" />
-          <p>Easton</p>
-        </a>
-      </div>
+    <div class="gallery">
+      <a class="build-tile" href="builder.html?design=kirby">K</a>
+      <a class="build-tile" href="builder.html?design=krystal">K</a>
+      <a class="build-tile" href="builder.html?design=jackson">J</a>
+      <a class="build-tile" href="builder.html?design=andy">A</a>
+      <a class="build-tile" href="builder.html?design=riley">R</a>
+      <a class="build-tile" href="builder.html?design=grayson">G</a>
+      <a class="build-tile" href="builder.html?design=easton">E</a>
     </div>
+
+    <a class="nav-home" href="index.html">Return to Home</a>
   </main>
 
   <footer>
     <p>&copy; 2025 The LEGO Lab</p>
   </footer>
+
 </body>
 </html>
