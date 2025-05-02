@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const generateBtn = document.getElementById('generateBtn');
-    const nameInput = document.getElementById('nameInput');
+    const generateButton = document.getElementById('generateButton');
+    const textInput = document.getElementById('textInput');
     const previewImage = document.getElementById('previewImage');
     const builderLink = document.getElementById('builderLink');
     const previewSection = document.getElementById('preview');
   
-    generateBtn.addEventListener('click', () => {
-      const name = nameInput.value.trim() || 'custom';
-      const safeName = encodeURIComponent(name.toLowerCase());
+    generateButton.addEventListener('click', () => {
+      const name = textInput.value.trim() || 'custom';
+      const safeName = encodeURIComponent(name.toLowerCase()); // Make sure to encode the name
   
-      // Update image and link
-      previewImage.src = `assets/images/sample_${safeName}_preview.png`;
+      // Update image source and link for builder page
+      previewImage.src = `assets/images/sample_${safeName}_preview.png`; // Adjust the image name based on input
       previewImage.alt = `${name} Desk Plaque Preview`;
-      builderLink.href = `builder.html?design=${safeName}`;
+      builderLink.href = `builder.html?design=${safeName}`; // Open builder with the same design
   
-      // Reveal preview
+      // Reveal the preview section
       previewSection.style.display = 'block';
     });
   });
