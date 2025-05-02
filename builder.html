@@ -1,39 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Lego Lab - Builder</title>
-  <link rel="stylesheet" href="Assets/styles/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desk Plaque Builder</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #212529;
+    }
+    #build-display {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    #previewImage {
+      max-width: 400px;
+      border: 3px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #dee2e6;
+      text-align: left;
+    }
+    th {
+      background-color: #e9ecef;
+    }
+    ol {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>The Lego Lab</h1>
+    <h1>Build Your LEGO® Desk Plaque</h1>
+    <p>Here’s everything you need to bring your creation to life!</p>
   </header>
 
-  <main class="container">
-    <section id="builderPreview" class="center-content">
-      <h2>Build Preview</h2>
-      <img id="previewImage" src="" alt="Preview Image" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
-    </section>
+  <section id="build-display">
+    <h2>Design Preview</h2>
+    <img id="previewImage" src="" alt="Design Preview">
+  </section>
 
-    <section id="brickList" class="info-section">
-      <!-- Filled dynamically -->
-    </section>
+  <section id="output-section"></section>
 
-    <section id="instructionGuide" class="info-section">
-      <!-- Filled dynamically -->
-    </section>
-  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const outputSection = document.getElementById('output-section');
+      const previewImage = document.getElementById('previewImage');
 
-  <footer>
-    <nav>
-      <a href="index.html">🏠 Home</a> |
-      <a href="explore.html">🧱 Explore</a> |
-      <a href="about.html">ℹ️ About</a>
-    </nav>
-  </footer>
+      const urlParams = new URLSearchParams(window.location.search);
+      const name = urlParams.get('design') || "custom";
 
-  <script src="Assets/scripts/script.js"></script>
+      // Set preview image (fallback to Chris image)
+      previewImage.src = `assets/images/sample_${name}_preview.png`;
+      previewImage.alt = `${name} Desk Plaque Preview`;
+
+      generatePlaque(name);
+
+      function generatePlaque(name) {
+        const bricksNeeded = [
+          { part: 'Plate 1 x 8', qty: 4, purpose: 'Base frame' },
+          { part: 'Plate 1 x 6', qty: 2, purpose: 'Base extension' },
+          { part: 'Brick 1 x 2', qty: 20, purpose: 'White background fill' },
+          { part: 'Brick 1 x 1', qty: 10, purpose: 'White background details' },
+          { part: 'Plate 1 x 2', qty: 15, purpose: 'Lettering black' },
+          { part: 'Plate 1 x 1', qty: 10, purpose: 'Lettering detailing' },
+          { part: 'Tile 1 x 2', qty: 10, purpose: 'Surface finishing' },
+          { part: 'Tile 1 x 1', qty: 6, purpose: 'Surface smoothing' },
+          { part: 'Round Plate 1 x 1', qty: 4, purpose: 'Decorative corners' }
+        ];
+
+        const legoPartsDatabase = {
+          'Plate 1 x 8': { partId: '3460', name: 'Plate 1 x 8', color: 'Black', image: 'https://img.bricklink.com/ItemImage/PN/11/3460.png' },
+          'Plate 1 x 6': { partId: '3666', name: 'Plate 1 x 6', color: 'Black', image: 'https://img.bricklink.com/ItemImage/PN/11/3666.png' },
+          'Brick 1 x 2': { partId: '3004', name: 'Brick 1 x 2', color: 'White', image: 'https://img.bricklink.com/ItemImage/PN/1/3004.png' },
+          'Brick 1 x 1': { partId: '3005', name: 'Brick 1 x 1', color: 'White', image: 'https://img.bricklink.com/ItemImage/PN/1/3005.png' },
+          'Plate 1 x 2': { partId: '3023', name: 'Plate 1 x 2', color: 'Black', image: 'https://img.bricklink.com/ItemImage/PN/11/3023.png' },
+          'Plate 1 x 1': { partId: '3024', name: 'Plate 1 x 1', color: 'Black', image: 'https://img.bricklink.com/ItemImage/PN/11/3024.png' },
+          'Tile 1 x 2': { partId: '3069b', name: 'Tile 1 x 2', color: 'White', image: 'https://img.bricklink.com/ItemImage/PN/1/3069b.png' },
+          'Tile 1 x 1': { partId: '3070b', name: 'Tile 1 x 1', color: 'White', image: 'https://img.bricklink.com/ItemImage/PN/1/3070b.png' },
+          'Round Plate 1 x 1': { partId: '4073', name: 'Round Plate 1 x 1', color: 'Red', image: 'https://img.bricklink.com/ItemImage/PN/5/4073.png' }
+        };
+
+        const brickListHTML = `
+          <h3>🧱 Brick List</h3>
+          <table>
+            <tr><th>Image</th><th>Part</th><th>Color</th><th>Quantity</th><th>Purpose</th></tr>
+            ${bricksNeeded.map(brick => {
+              const data = legoPartsDatabase[brick.part];
+              return `
+                <tr>
+                  <td><img src="${data.image}" alt="${data.name}" width="40"></td>
+                  <td>${data.name}</td>
+                  <td>${data.color}</td>
+                  <td>${brick.qty}</td>
+                  <td>${brick.purpose}</td>
+                </tr>`;
+            }).join('')}
+          </table>
+        `;
+
+        const instructionsHTML = `
+          <h3>🛠️ Build Instructions</h3>
+          <ol>
+            <li><strong>Base:</strong> Use 4x Plate 1 x 8 + 2x Plate 1 x 6 (Black) to form a 20-stud base.</li>
+            <li><strong>Background:</strong> Use Brick 1 x 2 and 1 x 1 (White) to build a two-layer background.</li>
+            <li><strong>Lettering:</strong> Use black Plates to write "<strong>${name.toUpperCase()}</strong>" across the plaque evenly spaced.</li>
+            <li><strong>Finishing:</strong> Add white Tiles between and around letters for a smooth surface.</li>
+            <li><strong>Decorative:</strong> Place 1x1 Round Red Plates in each corner for accent.</li>
+          </ol>
+        `;
+
+        outputSection.innerHTML = brickListHTML + instructionsHTML;
+      }
+    });
+  </script>
+
 </body>
 </html>
