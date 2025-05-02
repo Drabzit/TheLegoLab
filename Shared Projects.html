@@ -1,3 +1,105 @@
 #Shared Projects.html
 
 # Shows all shared created projects so others can use them
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Builds - The LEGO Lab</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <style>
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery-item {
+      width: 200px;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery-item p {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🧪 Explore LEGO Name Plaques</h1>
+    <p>Click on a name to view its build details</p>
+  </header>
+
+  <main>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <a href="builder.html?design=kirby">
+          <img src="assets/images/sample_kirby_preview.png" alt="Kirby Name Plaque" />
+          <p>Kirby</p>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="builder.html?design=krystal">
+          <img src="assets/images/sample_krystal_preview.png" alt="Krystal Name Plaque" />
+          <p>Krystal</p>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="builder.html?design=jackson">
+          <img src="assets/images/sample_jackson_preview.png" alt="Jackson Name Plaque" />
+          <p>Jackson</p>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="builder.html?design=andy">
+          <img src="assets/images/sample_andy_preview.png" alt="Andy Name Plaque" />
+          <p>Andy</p>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="builder.html?design=riley">
+          <img src="assets/images/sample_riley_preview.png" alt="Riley Name Plaque" />
+          <p>Riley</p>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="builder.html?design=grayson">
+          <img src="assets/images/sample_grayson_preview.png" alt="Grayson Name Plaque" />
+          <p>Grayson</p>
+        </a>
+      </div>
+      <div class="gallery-item">
+        <a href="builder.html?design=easton">
+          <img src="assets/images/sample_easton_preview.png" alt="Easton Name Plaque" />
+          <p>Easton</p>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 The LEGO Lab</p>
+  </footer>
+</body>
+</html>
