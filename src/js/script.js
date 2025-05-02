@@ -1,6 +1,8 @@
-// script.js
+
+
 
 // Basic LEGO Parts Database
+
 const legoPartsDatabase = {
     "Plate 1 x 8": { partId: "3460", name: "Plate 1 x 8", color: "Black", image: "https://img.bricklink.com/ItemImage/PN/11/3460.png" },
     "Plate 1 x 6": { partId: "3666", name: "Plate 1 x 6", color: "Black", image: "https://img.bricklink.com/ItemImage/PN/11/3666.png" },
@@ -18,16 +20,20 @@ window.addEventListener('DOMContentLoaded', () => {
     const outputSection = document.getElementById('output-section');
     const textInput = document.getElementById('textInput');
 
-    generateButton.addEventListener('click', () => {
-        const userText = textInput.value.toLowerCase();
-
-        if (userText.includes('chris')) {
-            generateChrisPlaque();
-        } else {
-            outputSection.innerHTML = `<p>No matching design found. Try typing "Chris".</p>`;
+    generateButton.addEventListener("click", () => {
+        previewSection.style.display = "block";
+    
+        const previewImage = document.getElementById("previewImage");
+        if (previewImage) {
+            previewImage.src = "Assets/images/sample_chris_preview.png";
+            previewImage.alt = "Preview of Chris Desk Plaque";
+            previewImage.style.cursor = "pointer";
+            previewImage.addEventListener("click", () => {
+                window.location.href = "builder.html?design=chris";
+            });
         }
     });
-});
+    
 
 function generateChrisPlaque() {
     const bricksNeeded = [
@@ -77,6 +83,7 @@ function generateChrisPlaque() {
 }
 
 // Show or hide the "Back to Top" button based on scroll position
+
 window.onscroll = function() {
     var button = document.querySelector('.back-to-top');
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -85,4 +92,3 @@ window.onscroll = function() {
       button.style.display = "none";
     }
   };
-  

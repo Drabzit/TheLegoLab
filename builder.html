@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Build Instructions</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts/build.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Lego Lab - Builder</title>
+  <link rel="stylesheet" href="Assets/styles/style.css" />
 </head>
 <body>
   <header>
-    <h1>Build Instructions</h1>
+    <h1>The Lego Lab</h1>
   </header>
-  <main>
-    <section id="brickList"></section>
-    <section id="instructionGuide"></section>
-    <button id="downloadPdfBtn">Download PDF</button>
-    <button id="saveToExploreBtn">Save to Explore</button>
+
+  <main class="container">
+    <section id="builderPreview" class="center-content">
+      <h2>Build Preview</h2>
+      <img id="previewImage" src="" alt="Preview Image" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+    </section>
+
+    <section id="brickList" class="info-section">
+      <!-- Filled dynamically -->
+    </section>
+
+    <section id="instructionGuide" class="info-section">
+      <!-- Filled dynamically -->
+    </section>
   </main>
+
+  <footer>
+    <nav>
+      <a href="index.html">🏠 Home</a> |
+      <a href="explore.html">🧱 Explore</a> |
+      <a href="about.html">ℹ️ About</a>
+    </nav>
+  </footer>
+
+  <script src="Assets/scripts/script.js"></script>
 </body>
 </html>
