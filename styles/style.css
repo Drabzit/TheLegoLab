@@ -13,8 +13,13 @@ body {
   flex-direction: column;
 }
 
-.emoji-flip {
+.emoji {
   display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5em; /* or adjust to match your h1 size */
+}
+
+.flipped {
   transform: scaleX(-1);
 }
 
@@ -82,6 +87,23 @@ button:hover {
   transform: scale(1.03);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+/*Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.build-tile {
+  text-align: center;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0
 
 /* Navigation buttons */
 .nav-buttons {
