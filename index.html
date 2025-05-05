@@ -9,41 +9,39 @@
 </head>
 
 <body>
+  <div class="page-container">
+    <header>
+      <img src="assets/images/logo.png" alt="The Lego Lab Logo" width="120">
+      <h1>🧪 The LEGO Lab</h1>
+      <p>Create your own LEGO name plaque!</p>
+    </header>
 
-  <header>
-    <img src="assets/images/logo.png" alt="The Lego Lab Logo" width="120">
-    <h1>🧪 The LEGO Lab</h1>
-    <p>Create your own LEGO name plaque!</p>
-  </header>
+    <main>
+      <input type="text" id="textInput" placeholder="Type Your Name e.g. Chris" />
+      <br/>
+      <button id="generateButton">Generate Build</button>
 
-  <main>
-    <input type="text" id="textInput" placeholder="Type Your Name e.g. Chris" />
-    <br/>
-    <button id="generateButton">Generate Build</button>
+      <!-- Preview Section -->
+      <section id="preview">
+        <h2>🔍 Preview</h2>
+        <a id="builderLink" href="#" target="_blank" title="Click to open in Builder">
+          <img id="previewImage" src="" alt="Design Preview" width="400" />
+        </a>
+      </section>
+    </main>
 
-    <!-- Preview Section -->
-    <section id="preview">
-      <h2>🔍 Preview</h2>
-      <a id="builderLink" href="#" target="_blank" title="Click to open in Builder">
-        <img id="previewImage" src="" alt="Design Preview" width="400" />
-      </a>
-    </section>
+    <div id="output-section"></div>
 
-  </main>
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <a href="explore.html"><button class="nav-button">Explore Builds</button></a>
+      <a href="about.html"><button class="nav-button">About</button></a>
+    </div>
+    <a href="#top" class="back-to-top" title="Back to top">&#8679;</a>
 
-  <div id="output-section"></div>
-
-  <!-- Navigation Buttons -->
-  <div class="nav-buttons">
-    <a href="explore.html"><button class="nav-button">Explore Builds</button></a>
-    <a href="about.html"><button class="nav-button">About</button></a>
+    <footer>
+      <p>&copy; 2025 The LEGO Lab</p>
+    </footer>
   </div>
-<a href="#top" class="back-to-top" title="Back to top">&#8679;</a>
-
-  <footer>
-    <p>&copy; 2025 The LEGO Lab</p>
-  </footer>
-
-
 </body>
 </html>
