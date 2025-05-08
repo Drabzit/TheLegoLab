@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = urlParams.get('design') || "custom";
   
     // Set preview image (fallback to Chris image)
-    previewImage.src = `assets/images/sample_${name}_preview.png`;
+    previewImage.src = `assets/images/${name}_preview.png`;
     previewImage.alt = `${name} Desk Plaque Preview`;
   
     generatePlaque(name);
