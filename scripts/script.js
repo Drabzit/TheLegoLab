@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = textInput.value.trim().toLowerCase();
     const safeName = encodeURIComponent(name || 'custom');
 
-    previewImage.src = `assets/images/sample_${safeName}_preview.png`;
+    previewImage.src = `assets/images/${safeName}_preview.png`;
     previewImage.alt = `${name} Desk Plaque Preview`;
     builderLink.href = `builder.html?design=${safeName}`;
     previewSection.style.display = 'block';
