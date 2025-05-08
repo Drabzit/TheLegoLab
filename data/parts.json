@@ -1,0 +1,58 @@
+{
+    "Plate 1 x 8": {
+      "partId": "3460",
+      "name": "Plate 1 x 8",
+      "color": "Black",
+      "image": "https://img.bricklink.com/ItemImage/PN/11/3460.png"
+    },
+    "Plate 1 x 6": {
+      "partId": "3666",
+      "name": "Plate 1 x 6",
+      "color": "Black",
+      "image": "https://img.bricklink.com/ItemImage/PN/11/3666.png"
+    },
+    "Brick 1 x 2": {
+      "partId": "3004",
+      "name": "Brick 1 x 2",
+      "color": "White",
+      "image": "https://img.bricklink.com/ItemImage/PN/1/3004.png"
+    },
+    "Brick 1 x 1": {
+      "partId": "3005",
+      "name": "Brick 1 x 1",
+      "color": "White",
+      "image": "https://img.bricklink.com/ItemImage/PN/1/3005.png"
+    },
+    "Plate 1 x 2": {
+      "partId": "3023",
+      "name": "Plate 1 x 2",
+      "color": "Black",
+      "image": "https://img.bricklink.com/ItemImage/PN/11/3023.png"
+    },
+    "Plate 1 x 1": {
+      "partId": "3024",
+      "name": "Plate 1 x 1",
+      "color": "Black",
+      "image": "https://img.bricklink.com/ItemImage/PN/11/3024.png"
+    },
+    "Tile 1 x 2": {
+      "partId": "3069b",
+      "name": "Tile 1 x 2",
+      "color": "White",
+      "image": "https://img.bricklink.com/ItemImage/PN/1/3069b.png"
+    },
+    "Tile 1 x 1": {
+      "partId": "3070b",
+      "name": "Tile 1 x 1",
+      "color": "White",
+      "image": "https://img.bricklink.com/ItemImage/PN/1/3070b.png"
+    },
+    "Round Plate 1 x 1": {
+      "partId": "4073",
+      "name": "Round Plate 1 x 1",
+      "color": "Red",
+      "image": "https://img.bricklink.com/ItemImage/PN/5/4073.png"
+    }
+    
+  }
+  
