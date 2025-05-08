@@ -9,18 +9,34 @@
 </head>
 
 <body>
+  <div class="page-container">
 
-  <header>
-    <h1>Build Your LEGO® Desk Plaque</h1>
-    <p>Here’s everything you need to bring your creation to life!</p>
-  </header>
+    <header>
+      <h1>🧪 Build Your LEGO® Desk Plaque 🧪</h1>
+      <p>Here’s everything you need to bring your creation to life!</p>
+    </header>
 
-  <section id="build-display">
-    <h2>Design Preview</h2>
-    <img id="previewImage" src="" alt="Design Preview">
-  </section>
+    <main>
+      <section id="build-display">
+        <h2>Design Preview</h2>
+        <img id="previewImage" src="" alt="Design Preview">
+      </section>
 
-  <section id="output-section"></section>
+      <section id="output-section"></section>
+
+      <div class="nav-buttons">
+        <a href="index.html"><button class="nav-button">🏠 Return Home</button></a>
+      </div>
+    </main>
+
+    <!-- Optional Footer -->
+    <!--
+    <footer>
+      <p>&copy; 2025 The Lego Lab. All Rights Reserved.</p>
+    </footer>
+    -->
+
+  </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -30,7 +46,6 @@
       const urlParams = new URLSearchParams(window.location.search);
       const name = urlParams.get('design') || "custom";
 
-      // Set preview image (fallback to Chris image)
       previewImage.src = `assets/images/${name}_preview.png`;
       previewImage.alt = `${name} Desk Plaque Preview`;
 
@@ -94,10 +109,5 @@
       }
     });
   </script>
-  
- <div class="nav-buttons">
-  <a href="index.html"><button class="nav-button">🏠 Return Home</button></a>
-</div>
-
 </body>
 </html>
